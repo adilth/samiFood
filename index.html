@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords"
+      content="marrakesh restaurant, samiFood, healty food,arabic food, morocco food, five start restaurant, open every day">
+   <meta name="description"
+      content="samiFood is a restaurant in marrakesh serve clients to have a healty food and a good food ">
+   <meta name="Rating" content="General">
+   <meta name="Distribution" content="Global">
+   <meta name="Revisit-After" content="5 Days">
+   <meta property="og:type" content="website">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+   <title>Cuisine Restaurant Website</title>
+</head>
+
+<body>
+   <header id="home">
+      <div class="cont fade" aria-label="main-header">
+         <nav>
+            <button class="nav-toggle" aria-label="open navigation">
+               <span class="hamburger"></span>
+            </button>
+            <ul class="nav">
+               <li class="items active"><a href="#home">Home</a></li>
+               <li class="items"><a href="#about">About Us</a></li>
+               <li class="items"><a href="#menu">Menu</a></li>
+               <li class="items"><a href="#contact">Order Now</a></li>
+               <li class="items"><a href="#blog">Blog</a></li>
+               <li class="items"><a href="#location">Location</a></li>
+               <li class="items"><i class="fa-solid fa-cart-shopping"></i></li>
+               <li class="items"><i class="fa-solid fa-magnifying-glass"></i></li>
+            </ul>
+         </nav>
+         <section class=" hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">welcome to our Cuisine Restaurant</h1>
+            <form>
+               <input type="search" placeholder="search Here" id="search">
+               <a href="#location" id="submit">Location <i class="fa-solid fa-caret-down"></i></a>
+            </form>
+            <ul>
+               <li><i class="fa-brands fa-facebook"></i> 22.5k</li>
+               <li><i class="fa-brands fa-twitter"></i> 6.2k</li>
+               <li><i class="fa-brands fa-instagram"></i> 50k</li>
+            </ul>
+         </section>
+      </div>
+   </header>
+   <section class="about" id="about" aria-labelledby="about-title">
+      <div class="cont fade">
+         <article>
+            <h3>about</h3>
+            <h2 id="about-title">discover our Restaurant Story</h2>
+            <p class="main-article">we samiFood is restaurant drawing inspiration from all
+               across the south and the world. We don't like to get boxed into a specific regional style as we love it
+               all.
+               In addition to the fan favorites of ribs, wings, brisket and sausage, we specialize in creative
+               sandwiches
+               using all of our marrakesh meats with flavorful sauces and condiments.
+            </p>
+            <p class="second-article">
+               samiFood is run by a small, passionate and hardworking team, most of whom were born and raised in the
+               MR area. We work hard every day to provide the best food, service and experience we can while making sure
+               our menu stays at a price point where you can be a once or twice-a-week regular.</p>
+            <a href="#menu">Discover Menu <i class="fa-solid fa-arrow-right-long"></i></a>
+         </article>
+      </div>
+
+   </section>
+   <section class="specility" id="menu" aria-labelledby="menu-title">
+      <div class="cont fade">
+         <section aria-label="specility">
+            <h3>Order Online Now</h3>
+            <h2 id="menu-title">our specility Cuisine</h2>
+            <ul class="list-items">
+               <li data-dish="breakfast" class="list breakfast active"><a href="#breakfast">Breakfast</a> </li>
+               <li data-dish="lunch" class='list lunch'><a href="#lunch">Launch</a> </li>
+               <li data-dish="dinner" class='list dinner'> <a href="#dinner">Dinner</a></li>
+               <li data-dish="dessert" class='list desset'> <a href="#dessert">Dessert</a></li>
+               <li data-dish="shake" class='list shake'> <a href="#shake">Shake</a></li>
+            </ul>
+            <div class="img-cont">
+               <div id="breakfast" class="img  active">
+                  <img loading="lazy" src="./img/break1.jpg" alt="breakfast-img">
+                  <img loading="lazy" loading="lazy" src="./img/break2.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/break3.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/break4.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/break5.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/break6.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/break7.jpg" alt="img">
+               </div>
+               <div id="lunch" class="img ">
+                  <img loading="lazy" loading="lazy" src="./img/lunch1.jpg" alt="lunch-img">
+                  <img loading="lazy" loading="lazy" src="./img/lunch2.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/lunch3.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/lunch4.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/lunch5.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/lunch4.jpg" alt="img">
+                  <img loading="lazy" loading="lazy" src="./img/lunch6.jpg" alt="img">
+               </div>
+               <div id="dinner" class="img  ">
+                  <img loading="lazy" src="./img/dinner1.jpg" alt="dinner-img">
+                  <img loading="lazy" src="./img/dinner2.jpg" alt="img">
+                  <img loading="lazy" src="./img/dinner3.jpg" alt="img">
+                  <img loading="lazy" src="./img/dinner4.jpg" alt="img">
+                  <img loading="lazy" src="./img/dinner5.jpg" alt="img">
+                  <img loading="lazy" src="./img/dinner6.jpg" alt="img">
+               </div>
+               <div id="dessert" class="img ">
+                  <img loading="lazy" src="./img/desser1.jpg" alt="desset-img">
+                  <img loading="lazy" src="./img/break7.jpg" alt="img">
+                  <img loading="lazy" src="./img/desset3.jpg" alt="img">
+                  <img loading="lazy" src="./img/desset4.jpg" alt="img">
+                  <img loading="lazy" src="./img/desset5.jpg" alt="img">
+                  <img loading="lazy" src="./img/desset6.jpg" alt="img">
+                  <img loading="lazy" src="./img/break5.jpg" alt="img">
+               </div>
+               <div id="shake" class="img  ">
+                  <img loading="lazy" src="./img/shake1.jpg" alt="shake-img">
+                  <img loading="lazy" src="./img/shake2.jpg" alt="img">
+                  <img loading="lazy" src="./img/shake3.jpg" alt="img">
+                  <img loading="lazy" src="./img/shake4.jpg" alt="img">
+                  <img loading="lazy" src="./img/shake5.jpg" alt="img">
+                  <img loading="lazy" src="./img/shake6.jpg" alt="img">
+               </div>
+            </div>
+         </section>
+      </div>
+   </section>
+   <section class="contact " id="contact" aria-labelledby="contact-title">
+      <div class="cont fade">
+         <section>
+            <h3>block table</h3>
+            <h2 id="contact-title">opening hours</h2>
+            <i class="fa-solid fa-phone"></i>
+            <span class="call">Call Now</span>
+            <span class="number">+212622510841</span>
+            <div class="work">
+               <div class="inwork">
+                  <span class="day">monday to tuesday</span>
+                  <span class="hours">09:00 am - 22:00 pm</span>
+               </div>
+               <div class="inweekend">
+                  <span class="day">friday to sunday</span>
+                  <span class="hours">11:00 am - 20:00 pm</span>
+               </div>
+            </div>
+            <div class="video">
+               <img src="./img/sectionbot.jpg" alt="fruit image">
+            </div>
+         </section>
+      </div>
+   </section>
+   <section class="testimonials" id="blog" itemid="blog-title">
+      <div class="cont fade">
+         <article>
+            <h3>testimonials</h3>
+            <h2 id="blog-title">Customers Say</h2>
+            <img loading="lazy" loading="lazy" src="./img/person.jpg" alt="Restaurant">
+            <span class="name">Mr Leon alix</span>
+            <span class="job"></span>
+            <div class="icons">
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star"></i>
+               <i class="fa-solid fa-star-half"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum iure itaque consectetur nulla
+               suscipit,
+               voluptates tempore veritatis nobis qui dolores a esse earum, nemo iste veniam odit, consequatur ipsam ut.
+               Lorem ipsum dolor sit amet.
+            </p>
+         </article>
+      </div>
+   </section>
+   <section class="slide" aria-label="slide-title">
+      <div id="slide-title" class="img-wrapper">
+         <img loading="lazy" class="img-slide" src="./img/img-slide1.jpg" alt="img slide Restaurant">
+         <img loading="lazy" class="img-slide" src="./img/img-slide2.jpg" alt="img slide Restaurant">
+         <img loading="lazy" class="img-slide" src="./img/img-slide3.jpg" alt="img slide Restaurant">
+      </div>
+   </section>
+   <section class="location" id="location" aria-labelledby="location-title">
+      <div class="cont fade">
+         <div class="heading">
+            <h3 class="specail-heading">our location</h3>
+            <h2 id="location-title" class="l-heading">where you can find us</h2>
+         </div>
+         <div id='map' class='map'></div>
+      </div>
+   </section>
+   <footer id="footer" class="footer">
+      <div class="cont fade">
+         <div class="flex">
+            <div class="foot-about">
+               <h4>more about-us</h4>
+               <p>Let our team bring the Federalist Pig experience to your office, home, or event. From small office
+                  lunches and birthday parties to weddings and galas, we cater events of every size and style. Because
+                  we make our barbecue from scratch daily (and sell out nightly), we require 48 hours notice and
+                  accommodate on a first-come, first-served basis.</p>
+            </div>
+
+            <div class="flex">
+               <div class="foot-contact">
+                  <h4>contact-us</h4>
+                  <p> you can find us in all this </p>
+                  <a href="+212622510841">
+                     <p><i class="fa fa-phone" aria-hidden="true"></i>+212622510841</p>
+                  </a>
+                  <a href="samifood-kech@gmail.com">
+                     <p><i class="fa fa-envelope" aria-hidden="true"></i>samifood-kech@gmail.com</p>
+                  </a>
+                  <a href="#location">
+                     <p><i class="fa fa-map-marker" aria-hidden="true"></i>marrakesh- elhara elchouhada n21</p>
+                  </a>
+               </div>
+               <div class="foot-socail">
+                  <h4>find us here</h4>
+                  <ul>
+                     <li>
+                        <a href="www.facebook.com">
+                           <i class="fa-brands fa-facebook" aria-hidden="true"></i>samiFood
+                        </a>
+                     </li>
+                     <li>
+                        <a href="www.twitter.com">
+                           <i class="fa-brands fa-twitter" aria-hidden="true"></i>samiFood
+                        </a>
+                     </li>
+                     <li>
+                        <a href="www.instagram.com">
+                           <i class="fa-brands fa-instagram" aria-hidden="true"></i>SamiFoodres
+                        </a>
+                     </li>
+                     <li>
+                        <a href="www.pinterest.com">
+                           <i class="fa-brands fa-pinterest" aria-hidden="true"></i>samifood-kech
+                        </a>
+                     </li>
+                     <li>
+                        <a href="www.deibbble.com">
+                           <i class="fa-brands fa-dribbble" aria-hidden="true"></i>SamiFood
+                        </a>
+                     </li>
+                     <li>
+                        <a href="www.youtube.com">
+                           <i class="fa-brands fa-youtube" aria-hidden="true"></i>SamiFoodres
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="n-foot">
+            <p>&copy; All right reserved. Designed by <span>SamiFood</span></p>
+         </div>
+      </div>
+   </footer>
+   <script defer src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+   <script defer src="./js/app.js"></script>
+</body>
+
+</html>
