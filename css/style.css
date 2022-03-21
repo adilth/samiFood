@@ -68,7 +68,8 @@ header {
   transition: 250ms ease;
   position: absolute;
   left: 0.2rem;
-  top: 0.2rem;
+  top: 0.4rem;
+  z-index: 99;
 }
 .nav--visible {
   transition: all 0.3s ease-in-out;
@@ -197,7 +198,6 @@ section.about {
   background-image: url("../img/section2.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  min-height: 100%;
 }
 .about article {
   width: 55%;
@@ -218,8 +218,8 @@ h2 {
 .about p {
   line-height: 1.6;
   max-width: 75ch;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.95rem;
+  color: rgb(78, 78, 78);
 }
 .about .main-article {
   margin: 1.2em 0;
@@ -250,8 +250,14 @@ h2 {
 .specility ul li {
   padding: 1.2em;
   font-size: 1.1rem;
-  color: #666;
+  color: #4b4b4b;
   border-bottom: 2px solid #ccc;
+}
+.specility ul li a {
+  color: #666;
+}
+.specility ul li a:active {
+  color: rgb(255, 136, 0);
 }
 .specility ul li.active {
   border-color: rgb(255, 136, 0);
@@ -273,12 +279,14 @@ h2 {
   gap: 1.5em;
 }
 .specility .img > * {
-  flex: 1;
+  flex: 1 0 20%;
 }
 .specility img {
   width: 20%;
   aspect-ratio: 4 / 3;
   /* min-height: 300px; */
+  object-fit: cover;
+  object-position: center center;
 }
 .contact {
   background: linear-gradient(
@@ -289,7 +297,6 @@ h2 {
     url("../img/coffeebac.jpg");
 
   background-size: 100% 100%;
-  min-height: 100%;
 }
 .contact section {
   padding: 4em 7em;
@@ -332,6 +339,7 @@ span.number {
 .video {
   width: 70%;
   margin: 0 auto;
+  object-fit: cover;
 }
 .slide {
   position: relative;
@@ -476,6 +484,35 @@ span.number {
   transform: translateX(0);
   opacity: 1;
 }
+.tv-back-to-top {
+  background: rgb(255, 136, 0);
+  bottom: 1.3rem;
+  color: #fff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.3rem;
+  height: 40px;
+  outline: medium none;
+  position: fixed;
+  right: 1.2rem;
+  border-radius: 50%;
+  width: 40px;
+  z-index: 9999;
+  opacity: 0;
+  transition: 3ms ease-in-out;
+}
+.tv-back-to-top i {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.tv-back-to-top:hover {
+  filter: brightness(120%);
+}
+.tv-back-to-top.show {
+  opacity: 1;
+}
 @media (max-width: 1112px) {
   header {
     padding: 0.8em 5em;
@@ -503,6 +540,13 @@ span.number {
   }
   span.number {
     font-size: 1.4rem;
+  }
+  .specility section {
+    text-align: center;
+    padding: 3.5em 4em 5em;
+  }
+  .specility .img > * {
+    flex: 1 0 30%;
   }
   .day {
     font-size: 1rem;
@@ -533,11 +577,11 @@ span.number {
     /* position: absolute; */
     flex-direction: column;
     transform: translateY(-100%);
-    width: 50%;
-    margin: 1rem auto 0;
-    padding: 0;
+    width: 100vw;
+    /* margin: 1rem auto 0; */
+    padding: 1.2em 0 0;
     top: 0;
-    left: 0;
+    left: -1.6em;
   }
   .nav--visible {
     visibility: visible;
@@ -546,6 +590,7 @@ span.number {
   }
   .nav.nav--visible {
     transform: translateY(0%);
+    background-color: #dbdbdb;
   }
 
   .nav-toggle {
@@ -556,14 +601,14 @@ span.number {
     flex-direction: column;
   }
   header {
-    padding: 0.8em 2em;
+    padding: 0em 1.5em 2em;
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.4),
         rgba(255, 255, 255, 0.3)
       ),
       url("../img/hero.jpg");
-    background-size: 100% 100%;
+    background-size: cover;
   }
   nav ul {
     justify-content: flex-start;
@@ -589,14 +634,20 @@ span.number {
   .hero ul {
     gap: 1em;
   }
-  .about {
-    background: linear-gradient(
+  section.about {
+    background-image: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.3)
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.4)
       ),
       url("../img/section2.jpg");
-    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #f2f6f7;
+  }
+  .about p {
+    color: rgb(236, 236, 236);
   }
   .about article {
     width: 70%;
@@ -608,7 +659,7 @@ span.number {
     font-size: 2.5rem;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .specility section {
     text-align: center;
@@ -619,9 +670,22 @@ span.number {
     font-size: 1rem;
     border-bottom: 1px solid #ccc;
   }
-
+  .specility .img > * {
+    flex: 1 0 45%;
+  }
   .specility .img img {
     width: 45%;
+  }
+  .contact {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("../img/coffeebac.jpg");
+
+    background-size: cover;
+    background-position: top right;
   }
   .contact section {
     padding: 4em 2em;
@@ -664,11 +728,17 @@ span.number {
   header {
     background: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.3)
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.3)
       ),
       url("../img/hero.jpg");
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: top right;
+    color: #f2f6f7;
+  }
+  .items.active::after,
+  .items:hover::after {
+    transform: scale(0);
   }
   section input {
     width: 100%;
@@ -678,6 +748,9 @@ span.number {
   .hero a {
     border-radius: 5px;
   }
+  .hero ul {
+    margin-bottom: 2em;
+  }
   section h1 {
     font-size: 2.5rem;
   }
@@ -685,17 +758,25 @@ span.number {
     width: 80%;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .specility section {
+    padding: 3.5em 1.5em 5em;
   }
   .specility ul {
     flex-wrap: wrap;
   }
-  /* .specility .img {
-    display: block;
-  } */
+  .specility .img {
+    flex-direction: column;
+  }
   .specility .img img {
     width: 100%;
-    margin-bottom: 1.5em;
+  }
+  .contact section {
+    padding: 4em 1.5em;
+  }
+  .hours {
+    font-size: 1rem;
   }
   .video {
     width: 100%;
@@ -706,8 +787,11 @@ span.number {
   .testimonials article {
     width: 90%;
   }
+  .testimonials p {
+    font-size: 0.9rem;
+  }
   .work {
-    gap: 1.5em;
+    gap: 1em;
   }
   .location .map {
     width: 100%;

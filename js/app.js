@@ -1,10 +1,16 @@
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
-
+// for toggle menu and remove when you click in links
+document.onclick = function (e) {
+  if (e.target.id !== "nav" && e.target.id !== "toggle") {
+    nav.classList.remove("nav--visible");
+    // navToggle.classList.remove("active-bar");
+  }
+};
 navToggle.addEventListener("click", () => {
   nav.classList.toggle("nav--visible");
 });
-
+//when click on list of food show diffrent menu and add active on menu
 let img = document.querySelectorAll(".img");
 let checkActive = document.querySelectorAll(".list");
 
@@ -32,6 +38,7 @@ checkActive.forEach((e) => {
   });
 });
 
+// for locatiom and make it show where location
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYWRpbHRoIiwiYSI6ImNsMHBlY2p4cTA2bHIzbHBldjE1OGVobDcifQ.aiKWDczCfdGyqLsb7e_oVg";
 navigator.geolocation.getCurrentPosition(successCallback, errorLocation, {
@@ -80,6 +87,7 @@ function wichFood() {
     });
   }
 }
+//make image slide automatic
 const slideImg = document.querySelectorAll(".img-wrapper .img-slide");
 const delayImg = 5000;
 let countImg = 0;
@@ -97,6 +105,7 @@ function showImg() {
   slideImg[countImg].style.opacity = 1;
   slideImg[countImg].style.zIndex = -1;
 }
+//make content fade when it reach a certent point
 const boxes = document.querySelectorAll(".fade");
 const checkBoxes = () => {
   const triggerBottom = (window.innerHeight / 5) * 4;
@@ -111,3 +120,16 @@ const checkBoxes = () => {
 };
 checkBoxes();
 window.addEventListener("scroll", checkBoxes);
+// scrool to top with js
+let upTuTop = document.getElementById("back-to-top");
+window.onscroll = function () {
+  this.scrollY >= 200
+    ? upTuTop.classList.add("show")
+    : upTuTop.classList.remove("show");
+};
+upTuTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
